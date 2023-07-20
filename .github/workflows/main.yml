@@ -22,9 +22,10 @@ jobs:
         run: echo "Build completed successfully!"
       - name: Checkout private repo remotely
         uses: actions/checkout@v2 
+        run: | ls
         with:
           repository: ICT-CET-Activities/hiddenRepo
-          path: <folder of choice>
+         # path: <folder of choice>
           token: ${{ secrets.MY_TOKEN }}
       - name: Show hidden files 
         run: |
