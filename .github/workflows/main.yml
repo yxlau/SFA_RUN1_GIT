@@ -28,7 +28,7 @@ jobs:
           # Optionally, you can specify the branch or tag name for the private repository
           ref: main
           # Optionally, you can specify the destination directory for the checkout
-         path: folder_yx
+          path: folder_yx
           # Replace "MY_TOKEN" with the name of your secret that contains the access token for the private repo
           token: ${{ secrets.MY_TOKEN }}
 
