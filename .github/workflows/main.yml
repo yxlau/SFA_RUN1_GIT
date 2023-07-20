@@ -15,7 +15,7 @@ jobs:
           repository: ${{ secrets.URL }}
           ref: main
           token: ${{ secrets.MY_TOKEN }}
-          path: /   # Optionally, you can specify the destination directory for the checkout
+         # path: .   # Optionally, you can specify the destination directory for the checkout
 
       - name: Show hidden files
         run: |
