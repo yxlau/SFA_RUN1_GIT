@@ -5,3 +5,4 @@ def hello():
 
 def hello_yx():
   print("Hello yixuan")
+  print(".")
