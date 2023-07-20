@@ -20,13 +20,19 @@ jobs:
 
       - name: Print message
         run: echo "Build completed successfully!"
+
       - name: Checkout private repo remotely
-        uses: actions/checkout@v2 
+        uses: actions/checkout@v2
         with:
           repository: ICT-CET-Activities/hiddenRepo
-         # path: <folder of choice>
+          # Optionally, you can specify the branch or tag name for the private repository
+          ref: main
+          # Optionally, you can specify the destination directory for the checkout
+          # path: <folder of choice>
+          # Replace "MY_TOKEN" with the name of your secret that contains the access token for the private repo
           token: ${{ secrets.MY_TOKEN }}
-      - name: Show hidden files 
+
+      - name: Show hidden files
         run: |
-         # cd <folder of choice>
+          # cd <folder of choice>
           ls
