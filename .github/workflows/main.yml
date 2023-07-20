@@ -9,21 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Checkout private repo remotely
+      - name: Checkout private repo
         uses: actions/checkout@v2
         with:
           repository: ${{ secrets.URL }}
-          # Optionally, you can specify the branch or tag name for the private repository
           ref: main
-          # Optionally, you can specify the destination directory for the checkout
-          path: ./
-          # Replace "MY_TOKEN" with the name of your secret that contains the access token for the private repo
           token: ${{ secrets.MY_TOKEN }}
+          path: /   # Optionally, you can specify the destination directory for the checkout
 
       - name: Show hidden files
         run: |
-         # cd ./
+         # cd /
           ls -a
