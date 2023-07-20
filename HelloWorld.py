@@ -1,2 +1,2 @@
 def hello():
-  print("Hello World of Benny!")
+  print ("20 July 2023")
