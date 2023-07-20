@@ -12,15 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build project
-        run: |
-          # Replace the build command below with your actual build command
-          echo "Building the project..."
-          # Your build command goes here
-
-      - name: Print message
-        run: echo "Build completed successfully!"
-
       - name: Checkout private repo remotely
         uses: actions/checkout@v2
         with:
@@ -28,11 +19,11 @@ jobs:
           # Optionally, you can specify the branch or tag name for the private repository
           ref: main
           # Optionally, you can specify the destination directory for the checkout
-          path: folder_yx
+          path: ./
           # Replace "MY_TOKEN" with the name of your secret that contains the access token for the private repo
           token: ${{ secrets.MY_TOKEN }}
 
       - name: Show hidden files
         run: |
-          cd folder_yx
-          ls
+          cd ./
+          ls -a
