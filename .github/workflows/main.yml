@@ -15,7 +15,7 @@ jobs:
       - name: Checkout private repo remotely
         uses: actions/checkout@v2
         with:
-          repository: ICT-CET-Activities/hiddenRepo
+          repository: {{ $secrets.URL }}
           # Optionally, you can specify the branch or tag name for the private repository
           ref: main
           # Optionally, you can specify the destination directory for the checkout
@@ -25,5 +25,5 @@ jobs:
 
       - name: Show hidden files
         run: |
-          cd ./
+         # cd ./
           ls -a
